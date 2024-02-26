@@ -1,0 +1,76 @@
+/* Imports the Muli font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* Applies box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles for the body */
+body {
+  font-family: 'Muli', sans-serif; /* Sets the font for the body */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Aligns items horizontally in the center */
+  height: 100vh; /* Sets the body height to the full viewport height */
+  overflow: hidden; /* Hides overflow content */
+  margin: 0; /* Removes default margin */
+  background-color: #212121; /* Sets the background color */
+}
+
+/* Styles for the container */
+.container {
+  display: flex; /* Uses flexbox for layout */
+  width: 90vw; /* Sets the width to 90% of the viewport width */
+}
+
+/* Styles for the panel */
+.panel {
+  background-size: cover; /* Sets the background size to cover */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+  height: 80vh; /* Sets the height to 80% of the viewport height */
+  border-radius: 50px; /* Sets the border radius to create rounded corners */
+  color: #fff; /* Sets the text color to white */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  flex: 0.5; /* Initial flex value */
+  margin: 10px; /* Adds margin around the panel */
+  position: relative; /* Sets the position to relative */
+  transition: all 700ms ease-in; /* Adds transition effect for all properties */
+}
+
+/* Styles for the panel heading */
+.panel h3 {
+  font-size: 24px; /* Sets the font size */
+  position: absolute; /* Sets the position to absolute */
+  bottom: 20px; /* Aligns the heading at the bottom */
+  left: 20px; /* Aligns the heading at the left */
+  margin: 0; /* Removes default margin */
+  opacity: 0; /* Initial opacity set to 0 */
+}
+
+/* Styles for the active panel */
+.panel.active {
+  flex: 5; /* Sets the flex value to expand the active panel */
+}
+
+/* Styles for the heading of the active panel */
+.panel.active h3 {
+  opacity: 1; /* Changes opacity to 1 */
+  transition: opacity 0.3s ease-in 0.4s; /* Adds transition effect for opacity */
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
